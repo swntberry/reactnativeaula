@@ -14,19 +14,34 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack'
 // import Pai from "./componentes/indireta/Pai"
 // import ContadorDisplay from "./componentes/contador/ContadorDisplay"
 // import ContadorV2 from "./componentes/contador/ContadorV2"
-import HomeScreen from "./componentes/HomeScreens"
-import DetailsScreen from "./componentes/DetailsScreen"
-
-const Stack = createNativeStackNavigator()
+// import HomeScreen from "./componentes/HomeScreens"
+// import DetailsScreen from "./componentes/DetailsScreen"
+import Familia from "./componentes/relacao/Familia"
+import Membro from "./componentes/relacao/Membro"
+import { SafeAreaView } from "react-native-safe-area-context"
+// const Stack = createNativeStackNavigator()
 
 export default () => (
-
-    <NavigationContainer>
-    <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen}/>
-        <Stack.Screen name="Details" component={DetailsScreen}/>
-    </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaView style={StyleSheet.TelaIniciante}>
+        <Familia>
+            <Membro nome="Jorge" sobrenome="Pereiras"/>
+            <Membro nome="Edinaldo" sobrenome="Pereiras"/>
+            <Membro nome="Marcinho" sobrenome="Pereiras"/>
+            <Membro nome="Roberta" sobrenome="Pereiras"/>
+       </Familia>
+       <Familia>
+            <Membro nome="Lucas" sobrenome="Da Silva"/>
+            <Membro nome="Fernando" sobrenome="Da Silva"/>
+            <Membro nome="Jorge" sobrenome="Da Silva"/>
+            <Membro nome="Marcia" sobrenome="Da Silva"/>
+        </Familia>
+    </SafeAreaView>
+    // <NavigationContainer>
+    // <Stack.Navigator>
+    //     <Stack.Screen name="Home" component={HomeScreen}/>
+    //     <Stack.Screen name="Details" component={DetailsScreen}/>
+    // </Stack.Navigator>
+    // </NavigationContainer>
 
 )
     // <View style={styles.TelaIniciante}>
